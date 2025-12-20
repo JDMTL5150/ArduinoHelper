@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--main-font);
+    background: var(--background);
+    background-repeat: no-repeat;
+}
+
+.main-container {
+    min-height: 100vh;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 0 2rem 2rem 2rem;
+}
+
+.group-col {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.space {
+    width: 3rem;
+}
+
+#logo {
+    width: 3rem;
+    height: auto;
+}
+
+.group-row {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.bright-off {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.bright-show {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: yellow;
+    opacity: 0;
+}
+
+.input-field {
+    height: 2rem;
+    border-radius: 10px;
+    border: transparent;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: aliceblue;
+    border: none;
+    background-color: rgb(189, 232, 218);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+    #mini-cards {
+        flex-direction: column;
+    }
+    #binhexdec-div {
+        width: 90%;
+    }
+    #binhexdec-div input {
+        margin: 0.5rem;
+    }
+    #pwmSim-div {
+        width: 90%;
+    }
+}
+
+.break {
+    height: 4rem;
+}
+
+.space {
+    height: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    background-color: aquamarine;
+}
+
+.resultLabel {
+    color: gray;
+    text-align: left;
+    padding: 2rem;
+    font-size: 2rem;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.card {
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgb(184, 184, 184);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}

@@ -9,8 +9,24 @@
 </head>
 
 <body>
-    <?php include "Header.php"; ?>
+    <div class="header">
+        <script>
+            fetch("Header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(".header").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading header:", error));
+        </script>
+    </div>
     <div class="main-container">
+        <button id="infoBtn" >i</button>
+        <script>
+            const info = document.getElementById("infoBtn");
+            info.addEventListener("click",function() {
+                alert("Press on the Menu Item titles to clear the inputs.");
+            });
+        </script>
         <div class="group-row" id="mini-cards">
             <div class="card" id="binhexdec-div">
                 <h1>DEC2BIN2HEX🧠</h1>
@@ -22,10 +38,21 @@
             <div class="card" id="pwmSim-div">
                 <h1>PWM simulator</h1>
                 <div class="group-row">
-                    <input type="range" id="ledSlider" class="input-field">
+                    <input type="range" min="0" max="255" id="ledSlider" class="input-field">
                     <div class="break"></div>
-                    <div class="bright-show"></div>
+                    <div class="group-col">
+                        <div class="bright-show"></div>
+                        <div id="arduino-val">0</div>
+                    </div>
                 </div>
+                <script>
+                    const res = document.getElementById("arduino-val");
+                    const slider = document.getElementById("ledSlider");
+                    slider.addEventListener("input",function () {
+                        var num = Number(slider.value);
+                        res.textContent = num;
+                    });
+                </script>
             </div>
         </div>
         <div class="ohms-container card">

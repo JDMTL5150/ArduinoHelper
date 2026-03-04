@@ -18,6 +18,20 @@ body {
     margin: 0 2rem 2rem 2rem;
 }
 
+#infoBtn {
+    background-color: transparent;
+    border-radius: 50%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    color: aquamarine;
+    border: 2px solid aquamarine;
+}
+
+#infoBtn:hover {
+    color: aliceblue;
+    background-color: aquamarine;
+}
+
 .group-col {
     display: flex;
     gap: 1rem;
